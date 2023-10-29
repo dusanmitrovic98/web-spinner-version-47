@@ -12,42 +12,21 @@
             margin: 0;
         }
 
-        .spinner-container {
-            display: flex;
-            align-items: center;
-        }
-
         .spinner {
             width: 100px;
             height: 100px;
-            position: relative;
-            animation: rotate 2s linear infinite; /* Updated animation time */
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            animation: rotate 2s linear infinite;
         }
 
-        .moon {
-            width: 40px;
-            height: 40px;
-            background-color: transparent;
-            border-radius: 50%;
-            border: 10px solid #ff5733;
-            /* Change the color as desired */
-            position: absolute;
-            animation: spin 1s linear infinite; /* Updated animation time */
-        }
-
-        .moon:nth-child(2) {
-            top: 0;
-            left: 60px;
-        }
-
-        .moon:nth-child(3) {
-            top: 60px;
-            left: 0;
-        }
-
-        .moon:nth-child(4) {
-            top: 60px;
-            left: 60px;
+        .square {
+            width: 30px;
+            height: 30px;
+            background-color: #ff5733;
+            margin: 5px;
+            animation: spin 2s linear infinite;
         }
 
         @keyframes rotate {
@@ -66,22 +45,23 @@
             }
 
             100% {
-                transform: rotate(720deg); /* Updated to rotate twice */
+                transform: rotate(360deg);
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="spinner-container">
-        <div class="spinner">
-            <div class="moon"></div>
-            <div class="moon"></div>
-            <div class="moon"></div>
-            <div class="moon"></div>
-        </div>
+    <div class="spinner">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
     </div>
 </body>
 
 </html>
-
